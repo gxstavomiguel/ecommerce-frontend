@@ -1,0 +1,59 @@
+<div
+  class="min-h-[calc(100vh-120px)] flex items-center justify-center mt-10 mb-10"
+>
+  <div class="p-4 bg-gray-100 rounded-lg shadow-md w-200">
+    <h2 class="text-2xl font-bold mb-4">Carrinho</h2>
+
+    @if (itens.length === 0) {
+    <p class="text-gray-600">Seu carrinho está vazio.</p>
+    } @else {
+    <ul class="divide-y divide-gray-300">
+      @for (item of itens; track item.id) {
+      <li class="flex items-center gap-4 py-3">
+        <img
+          [src]="getImagemProduto(item.nome)"
+          alt="{{ item.nome }}"
+          class="w-16 h-16 object-cover rounded"
+        />
+        <div class="flex justify-between items-center w-full">
+          <div>
+            <p class="font-medium">{{ item.nome }}</p>
+            <p class="text-sm text-gray-600">
+              Qtd: {{ item.quantidade }} — Preço:
+              {{ item.preco | currency : "BRL" }}
+            </p>
+          </div>
+          <button
+            (click)="removerItem(item.id)"
+            class="text-red-600 hover:underline"
+          >
+            Remover
+          </button>
+        </div>
+      </li>
+      }
+    </ul>
+
+    <p class="mt-4 font-semibold text-lg">
+      Total: {{ total | currency : "BRL" }}
+    </p>
+
+    <div class="flex gap-4 mt-4">
+      <button
+        (click)="finalizarCompra()"
+        class="px-6 py-2 bg-green-600 text-white rounded hover:bg-green-700"
+      >
+        Finalizar Compra
+      </button>
+
+      <button
+        (click)="limparCarrinho()"
+        class="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700"
+      >
+        Limpar Carrinho
+      </button>
+    </div>
+
+    }
+  </div>
+</div>

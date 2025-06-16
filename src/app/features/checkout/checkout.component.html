@@ -1,0 +1,78 @@
+<div class="max-w-xl mx-auto mt-10 p-6 bg-white rounded shadow">
+  <h2 class="text-2xl font-bold mb-6">Finalizar Compra</h2>
+
+  <form [formGroup]="checkoutForm" (ngSubmit)="finalizarPedido()">
+    <label for="nome" class="block mb-2 font-medium">Nome</label>
+    <input
+      id="nome"
+      type="text"
+      formControlName="nome"
+      class="w-full p-2 border rounded"
+    />
+    <div
+      *ngIf="
+        checkoutForm.get('nome')?.touched && checkoutForm.get('nome')?.invalid
+      "
+      class="text-red-500 text-sm"
+    >
+      Nome é obrigatório (mínimo 3 caracteres).
+    </div>
+
+    <label for="email" class="block mt-4 mb-2 font-medium">Email</label>
+    <input
+      id="email"
+      type="email"
+      formControlName="email"
+      class="w-full p-2 border rounded"
+    />
+    <div
+      *ngIf="
+        checkoutForm.get('email')?.touched && checkoutForm.get('email')?.invalid
+      "
+      class="text-red-500 text-sm"
+    >
+      Email inválido.
+    </div>
+
+    <label for="telefone" class="block mt-4 mb-2 font-medium">Telefone</label>
+    <input
+    id="telefone"
+      type="text"
+      formControlName="telefone"
+      class="w-full p-2 border rounded"
+    />
+
+    <div
+      *ngIf="checkoutForm.get('telefone')?.touched && checkoutForm.get('telefone')?.invalid" class="text-red-500 text-sm"
+    >
+      Telefone inválido (mínimo 10 dígitos).
+    </div>
+
+    <label for="endereco" class="block mt-2 font-medium">Endereço</label>
+    <input
+      id="endereco"
+      type="text"
+      formControlName="endereco"
+      class="w-full p-2 border rounded"
+    />
+
+    <label for="cep" class="block mt-2 font-medium">CEP</label>
+    <input
+      id="cep"
+      type="text"
+      formControlName="cep"
+      class="w-full p-2 border rounded"
+    />
+
+    <div *ngIf="checkoutForm.get('cep')?.touched && checkoutForm.get('cep')?.invalid" class="text-red-500 text-sm">
+      CEP invalido (ex: 12345-678);
+    </div>
+
+    <button
+      type="submit"
+      class="mt-6 w-full bg-green-600 text-white py-2 rounded hover:bg-green-700"
+    >
+      Finalizar Pedido
+    </button>
+  </form>
+</div>
