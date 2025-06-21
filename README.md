@@ -1,59 +1,50 @@
-# Ecommerce
+# Mini Ecommerce
+Este é um **Mini Ecommerce** desenvolvido com **Angular**, **Tailwind CSS**, **TypeScript**, **Java**, **Spring** e **PostgreSQL**.
+Link do repositório do [Backend](https://github.com/gxstavomiguel/ecommerce-backend).
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.5.
+![ecommerce](public/1.png)
+![ecommerce](public/2.png)
 
-## Development server
+## Tecnologias Utilizadas
+-   **Angular** 
+    
+-   **Tailwind CSS**
+    
+-   **TypeScript**
 
-To start a local development server, run:
+## Funcionalidades
 
-```bash
-ng serve
-```
+-   ✅ Navegação entre diferentes rotas
+-   ✅ Pesquisar por produtos específicos
+-   ✅ Adicionar produtos no carrinho
+-   ✅ Registro de usuário e entrega 
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+![ecommerce](public/3.png)
+![ecommerce](public/4.png)
+![ecommerce](public/5.png)
 
-## Code scaffolding
+## Como Rodar 
+### Pré-requisitos:
+-   Node.js 
+-   Angular CLI  
+-   Java 8 ou superior
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+1. **Clone os repositórios:**
+   ```bash
+   git clone https://github.com/gxstavomiguel/filmes-web-frontend
+   git clone https://github.com/gxstavomiguel/ecommerce-backend
+2. **Abra o frontend no Visual Studio Code e rode:**
+``
+	ng serve
+   ``
+3. **Abra o backend no Intellij e rode a classe main.**
+``
+	EcommerceApplication
+   ``
 
-```bash
-ng generate component component-name
-```
+4. **Inicie o projeto.**
+   ```bash 
+   A aplicação estará disponível em: http://localhost:4200
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
 
-```bash
-ng generate --help
-```
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
