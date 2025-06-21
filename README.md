@@ -12,6 +12,12 @@ Link do repositório do [Backend](https://github.com/gxstavomiguel/ecommerce-bac
     
 -   **TypeScript**
 
+-   **Java**
+  
+-   **Spring**
+
+-   **PostgreSQL**
+
 ## Funcionalidades
 
 -   ✅ Navegação entre diferentes rotas
@@ -31,7 +37,7 @@ Link do repositório do [Backend](https://github.com/gxstavomiguel/ecommerce-bac
 
 1. **Clone os repositórios:**
    ```bash
-   git clone https://github.com/gxstavomiguel/filmes-web-frontend
+   git clone https://github.com/gxstavomiguel/ecommerce-frontend
    git clone https://github.com/gxstavomiguel/ecommerce-backend
 2. **Abra o frontend no Visual Studio Code e rode:**
 ``
